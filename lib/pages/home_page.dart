@@ -1,5 +1,6 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
+import 'package:designetestapp/util/emojicon_face.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -42,7 +43,6 @@ class _HomePageState extends State<HomePage> {
                     // ignore: prefer_const_constructors
                     SizedBox(
                       height: 8,
-                      
                     ),
                     Text(
                       '14 oct, 2022',
@@ -68,7 +68,8 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
-            SizedBox(height: 25,
+            SizedBox(
+              height: 25,
             ),
 
             //search bar
@@ -80,40 +81,122 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.all(12),
               // ignore: prefer_const_constructors, prefer_const_literals_to_create_immutables
               child: Row(children: [
-                Icon(Icons.search,
-                color: Colors.white,
-                ),
-                SizedBox(width: 5,),
-                Text('Search',
-                // ignore: prefer_const_constructors
-                style:TextStyle(
+                Icon(
+                  Icons.search,
                   color: Colors.white,
-                ) ,
                 ),
-              ]
-              ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  'Search',
+                  // ignore: prefer_const_constructors
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ]),
             ),
-             SizedBox(
+            SizedBox(
               height: 25,
             ),
 
-             Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-               children: [
-                 Text(
-                          'Hello, How do you feel',
-                          // ignore: prefer_const_constructors
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 22,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Icon(Icons.more_horiz,
-                        color:Colors.white,
-                        ),
-               ],
-             ),
+              children: [
+                Text(
+                  'Hello, How do you feel',
+                  // ignore: prefer_const_constructors
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    // ignore: prefer_const_constructors
+                    EmoticonFace(
+                      emoticonFace: '🤑',
+                    ),
+                    // ignore: prefer_const_constructors
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Money',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+
+                Column(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    // ignore: prefer_const_constructors
+                    EmoticonFace(
+                      emoticonFace: '🤣',
+                    ),
+                    // ignore: prefer_const_constructors
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Laughing',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+                Column(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    // ignore: prefer_const_constructors
+                    EmoticonFace(
+                      emoticonFace: '🧭',
+                    ),
+                    // ignore: prefer_const_constructors
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Clock',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+
+                Column(
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    // ignore: prefer_const_constructors
+                    EmoticonFace(
+                      emoticonFace: '🐣',
+                    ),
+                    // ignore: prefer_const_constructors
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Chick',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+              ],
+            )
           ]),
         ),
       ),
