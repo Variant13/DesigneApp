@@ -15,12 +15,23 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[800],
+      // ignore: prefer_const_literals_to_create_immutables
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: ''),
+        ],
+      ),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Column(children: [
-            // ignore: prefer_const_literals_to_create_immutables
-            Row(
+        child: Column(
+          children: [
+          // ignore: prefer_const_literals_to_create_immutables
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal:25.0),
+            child: Column(
+              children: [
+                Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               // ignore: prefer_const_literals_to_create_immutables
               children: [
@@ -142,7 +153,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-
                 Column(
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
@@ -177,7 +187,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-
                 Column(
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
@@ -196,8 +205,39 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ],
-            )
-          ]),
+            ),
+              ]
+            ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.all(25),
+              color: Colors.grey[100],
+              child: Center(
+                child: Column(
+                  children:[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Exercices',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                      ),
+                      Icon(Icons.more_horiz),
+                    ],
+                  ),
+                ],
+            ),
+              ),
+          ),
+        )
+        ],
         ),
       ),
     );
