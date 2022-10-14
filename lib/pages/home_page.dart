@@ -68,18 +68,52 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
+            SizedBox(height: 25,
+            ),
 
             //search bar
             Container(
-              decoration: BoxDecoration(color: Colors.blue[600],
+              decoration: BoxDecoration(
+                color: Colors.blue[600],
+                borderRadius: BorderRadius.circular(14),
               ),
+              padding: EdgeInsets.all(12),
               // ignore: prefer_const_constructors, prefer_const_literals_to_create_immutables
               child: Row(children: [
-                Icon(Icons.search),
-                Text('Search'),
+                Icon(Icons.search,
+                color: Colors.white,
+                ),
+                SizedBox(width: 5,),
+                Text('Search',
+                // ignore: prefer_const_constructors
+                style:TextStyle(
+                  color: Colors.white,
+                ) ,
+                ),
               ]
               ),
-            )
+            ),
+             SizedBox(
+              height: 25,
+            ),
+
+             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+               children: [
+                 Text(
+                          'Hello, How do you feel',
+                          // ignore: prefer_const_constructors
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Icon(Icons.more_horiz,
+                        color:Colors.white,
+                        ),
+               ],
+             ),
           ]),
         ),
       ),
