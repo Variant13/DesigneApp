@@ -240,10 +240,31 @@ class _HomePageState extends State<HomePage> {
                  Expanded(
                    child: ListView(
                     children: [
-                      ExerciceTitle(),
-                      ExerciceTitle(),
-                      ExerciceTitle(),
-                      ExerciceTitle(),
+                      ExerciceTitle(
+                        icon: Icons.favorite,
+                        exerciceName: 'Speaking Skills' ,
+                        numberOfExercices:30,
+                        color: Colors.pinkAccent ,
+                      ),
+                      ExerciceTitle(
+                        icon: Icons.person,
+                        exerciceName: 'Reading Skills' ,
+                        numberOfExercices: 10,
+                        color: Colors.green ,
+                      ),
+                  
+                      ExerciceTitle(
+                        icon: Icons.star,
+                        exerciceName: 'writing Skills' ,
+                        numberOfExercices: 15,
+                        color: Colors.blueGrey ,
+                      ),
+                      ExerciceTitle(
+                        icon: Icons.bolt,
+                        exerciceName: 'langage Skills' ,
+                        numberOfExercices: 30,
+                        color: Colors.red ,
+                      ),
                     ],
                    ),
                  ),
