@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
 
 import 'package:designetestapp/util/emojicon_face.dart';
+import 'package:designetestapp/util/exercice_title.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -216,10 +217,11 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: Container(
               padding: EdgeInsets.all(25),
-              color: Colors.grey[100],
+              color: Colors.grey[200],
               child: Center(
                 child: Column(
                   children:[
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -232,6 +234,20 @@ class _HomePageState extends State<HomePage> {
                       Icon(Icons.more_horiz),
                     ],
                   ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                 Expanded(
+                   child: ListView(
+                    children: [
+                      ExerciceTitle(),
+                      ExerciceTitle(),
+                      ExerciceTitle(),
+                      ExerciceTitle(),
+                    ],
+                   ),
+                 ),
+
                 ],
             ),
               ),
